@@ -24,10 +24,15 @@ class CarsController < ApplicationController
   # POST /cars
   # POST /cars.json
   def create
-    @car = Car.new(car_params)
+    logger.tagged "Add CAR" do
+      logger.info "Creating object"
+      @car = Car.new(car_params)
+      logger.info "Saving a car"
+      @saved = @car.save
+    end
 
     respond_to do |format|
-      if @car.save
+      if @saved
         format.html { redirect_to @car, notice: 'Car was successfully created.' }
         format.json { render :show, status: :created, location: @car }
       else
