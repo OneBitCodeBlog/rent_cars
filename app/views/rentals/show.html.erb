@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Start date:</strong>
+  <%= @rental.start_date %>
+</p>
+
+<p>
+  <strong>End date:</strong>
+  <%= @rental.end_date %>
+</p>
+
+<p>
+  <strong>User:</strong>
+  <%= @rental.user %>
+</p>
+
+<p>
+  <strong>Car:</strong>
+  <%= @rental.car %>
+</p>
+
+<%= link_to 'Edit', edit_rental_path(@rental) %> |
+<%= link_to 'Back', rentals_path %>
