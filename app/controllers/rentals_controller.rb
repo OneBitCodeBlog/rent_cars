@@ -31,6 +31,7 @@ class RentalsController < ApplicationController
         format.html { redirect_to @rental, notice: 'Rental was successfully created.' }
         format.json { render :show, status: :created, location: @rental }
       else
+        Rollbar.error("Error when trying to rent a car")
         format.html { render :new }
         format.json { render json: @rental.errors, status: :unprocessable_entity }
       end
