@@ -1,0 +1,22 @@
+<spacer size="16"></spacer>
+
+<container>
+
+  <spacer size="24"></spacer>
+  
+  <row>
+    <columns small="12">
+
+      <h1>Rental Confirmation</h1>
+      <hr />
+
+      <p class="lead">Hi <%= @rental.user.email %>!</p>
+      <p style="color: #484848; line-height: 1.5;">
+        You've just rented the car <%= @rental.car.name %> - <%= @rental.car.manufacturer %>.
+        Enjoy it! =)
+      </p>
+
+      <spacer size="16"></spacer>
+    </column>
+  </row>
+</container>
