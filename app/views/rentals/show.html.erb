@@ -12,12 +12,12 @@
 
 <p>
   <strong>User:</strong>
-  <%= @rental.user %>
+  <%= @rental.user.email %>
 </p>
 
 <p>
   <strong>Car:</strong>
-  <%= @rental.car %>
+  <%= @rental.car.name %> - <%= @rental.car.manufacturer %>
 </p>
 
 <%= link_to 'Edit', edit_rental_path(@rental) %> |

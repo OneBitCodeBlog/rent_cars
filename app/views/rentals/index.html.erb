@@ -18,8 +18,8 @@
       <tr>
         <td><%= rental.start_date %></td>
         <td><%= rental.end_date %></td>
-        <td><%= rental.user %></td>
-        <td><%= rental.car %></td>
+        <td><%= rental.user.email %></td>
+        <td><%= rental.car.name %></td>
         <td><%= link_to 'Show', rental %></td>
         <td><%= link_to 'Edit', edit_rental_path(rental) %></td>
         <td><%= link_to 'Destroy', rental, method: :delete, data: { confirm: 'Are you sure?' } %></td>
