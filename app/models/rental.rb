@@ -7,6 +7,6 @@ class Rental < ApplicationRecord
   private
 
   def send_confirmation
-    RentalMailer.with(rental: self).confirmation.deliver_now!
+    RentalMailer.with(rental: self).confirmation.deliver_later!
   end
 end
